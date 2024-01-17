@@ -7,6 +7,11 @@ class Cart extends \VuFind\Cart
     const CART_COOKIE_LMS_ID =  'vufind_cart_lms_id';
     const CART_COOKIE_LMS_URL =  'vufind_cart_lms_url';
 
+    /**
+     * Check if LMS is active.
+     *
+     * @return bool
+     */
     public function isLmsActive() {
         if($this->cookieManager->get(self::CART_COOKIE_LMS_ID) && $this->cookieManager->get(self::CART_COOKIE_LMS_URL)) {
             return true;
